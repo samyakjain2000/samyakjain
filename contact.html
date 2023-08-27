@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body background="img.jpg";background-repeat: no-repeat;>
+<div class="banner">
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+    <br><br>
+    <br><br>
+    <main>
+        <section id="contact">    
+            <div class="formcolour">
+                <h2>Contact Me</h2>
+                <form action="https://sheetdb.io/api/v1/x80yri8zpciwb" method="post" id="sheetdb-form">
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text"id="name" name="data[name]" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="data[email]" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="data[message]" required></textarea>
+                  </div>        
+                  <div class="form-group">
+                    <button type="submit">Submit</button>
+                  </div>
+            </form>
+        </section>
+        <br><br>
+        <br><br>
+        <div>
+          <ul class="social-icons">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            <li><a href="https://www.linkedin.com/in/jainsamyak29/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/samyak_jain_2000/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/samyak.jain.12327/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/samjain600" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+    </main>
+    <br><br>
+    <br><br>
+    <br><br>
+    
+    <script>
+      var form = document.getElementById('sheetdb-form');
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+        }).then(
+          response => response.json()
+        ).then((html) => {
+          // you can put any JS code here
+          window.location.href = 'thankyou.html';
+        });
+      });
+    </script>
+    </body>
+    </div>
+    <footer>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <p class="left-content"><i class="fas fa-user"></i>Samyak Jain</p>
+      <p><i class="fas fa-map-marker-alt"></i>College Park MD 20740</p>
+      <p class="middle-content"><i class="fas fa-phone"></i>+1 (240) 927 7402</p>
+      <p class="right-content"><i class="fas fa-envelope"></i>sjain229@umd.edu</p>
+    </footer>
+</body>
+</html>
